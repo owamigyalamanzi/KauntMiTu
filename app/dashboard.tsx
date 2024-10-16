@@ -183,7 +183,7 @@ const Dashboard = () => {
     setRelation(person.relation);
     setAge(person.age);
     setHouseholdNo(person.householdNo.toString());
-    setMaritialStatus(person.maritialStatus);
+    setMaritialStatus(person.maritalStatus);
     setCitizenship(person.citizenship);
  
   };
@@ -208,7 +208,7 @@ const Dashboard = () => {
     setTotal("");
     setRelation("");
     setAge("");
-    setMaritialStatus("Select Maritial Status");
+    setMaritalStatus("Select Marital Status");
     setCitizenship("Select Citizenship");
   };
 
@@ -341,7 +341,7 @@ const Dashboard = () => {
 
         <TextInput
           style={styles.input}
-          placeholder="Relation to Head of Family"
+          placeholder="Relation to the Head of Family"
           value={relation}
           onChangeText={setRelation}
           keyboardType="default"

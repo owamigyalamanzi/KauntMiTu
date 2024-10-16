@@ -30,6 +30,7 @@ export const initializeDB = async () => {
   await db.execAsync(`
     PRAGMA journal_mode = WAL;
 
+
     CREATE TABLE IF NOT EXISTS person
 
     ( id INTEGER PRIMARY KEY NOT NULL, 

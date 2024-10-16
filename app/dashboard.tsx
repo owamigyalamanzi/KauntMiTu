@@ -45,7 +45,7 @@ const Dashboard = () => {
   const [selectedPerson, setSelectedPerson] = useState<number | null>(null);
   const [editingPersonId, setEditingPersonId] = useState<number | null>(null); // Track if updating a person
   const [age, setAge] = useState("");
-  const [maritalStatus, setMaritialStatus] = useState("Select Marital Status");
+  const [maritalStatus, setMaritalStatus] = useState("Select Marital Status");
   const [citizenship, setCitizenship] = useState("Select Gender");
 
   const onChangeDate = (event: any, selectedDate?: Date) => {
@@ -86,7 +86,7 @@ const Dashboard = () => {
       !relation ||
       !age ||
       gender === "Select Gender" ||
-      maritalStatus === "Select Maritial Status" ||
+      maritalStatus === "Select Marital Status" ||
       citizenship === "Select Citizenship"
 
     ) {
@@ -183,7 +183,7 @@ const Dashboard = () => {
     setRelation(person.relation);
     setAge(person.age);
     setHouseholdNo(person.householdNo.toString());
-    setMaritialStatus(person.maritalStatus);
+    setMaritalStatus(person.maritalStatus);
     setCitizenship(person.citizenship);
  
   };
@@ -389,7 +389,7 @@ const Dashboard = () => {
 
          <Picker
           selectedValue={maritalStatus}
-          onValueChange={(itemValue) => setMaritialStatus(itemValue)}
+          onValueChange={(itemValue) => setMaritalStatus(itemValue)}
           style={styles.picker}
         >
           <Picker.Item label={"Select Marital Status"} value="" />
@@ -423,7 +423,7 @@ const Dashboard = () => {
             <Text style={styles.tableHeaderText}>District</Text>
             <Text style={styles.tableHeaderText}>Ward</Text>
             <Text style={styles.tableHeaderText}>Gender</Text>
-            <Text style={styles.tableHeaderText}>Maritial Status</Text>
+            <Text style={styles.tableHeaderText}>Marital Status</Text>
             <Text style={styles.tableHeaderText}>Census Type</Text>
             <Text style={styles.tableHeaderText}>Date of Birth</Text>
             <Text style={styles.tableHeaderText}>Actions</Text>
@@ -447,7 +447,7 @@ const Dashboard = () => {
               <Text style={styles.tableRowText}>{person.ward}</Text>
               <Text style={styles.tableRowText}>{person.censusType}</Text>
               <Text style={styles.tableRowText}>{person.gender}</Text>
-              <Text style={styles.tableRowText}>{person.maritialStatus}</Text>
+              <Text style={styles.tableRowText}>{person.maritalStatus}</Text>
               <Text style={styles.tableRowText}>{person.locality}</Text>
               <Text style={styles.tableRowText}>{person.lot}</Text>
               <Text style={styles.tableRowText}>{person.section}</Text>
